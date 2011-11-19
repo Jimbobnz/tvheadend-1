@@ -643,7 +643,7 @@ dvr_event_replaced(event_t *e, event_t *new_e)
     ude = dvr_entry_find_by_event_fuzzy(new_e);
     if (ude == NULL && de->de_sched_state == DVR_SCHEDULED)
       dvr_entry_cancel(de);
-    else if(new_e->e_title != NULL)
+    else
       dvr_entry_update(de, new_e->e_title, new_e->e_start, new_e->e_stop);
   }
       
@@ -747,14 +747,10 @@ dvr_entry_t *
 dvr_entry_find_by_event_fuzzy(event_t *e)
 {
   dvr_entry_t *de;
-  
-  if (e->e_title == NULL)
-    return NULL;
 
   LIST_FOREACH(de, &e->e_channel->ch_dvrs, de_channel_link)
-    if ((abs(de->de_start - e->e_start) < 600) && (abs(de->de_stop - e->e_stop) < 600)) {
-        return de;
-    }
+    if (abs(de->de_start - e->e_start) < 600 && abs(de->de_stop - e->e_stop) < 600)
+      return de;
   return NULL;
 }
 
