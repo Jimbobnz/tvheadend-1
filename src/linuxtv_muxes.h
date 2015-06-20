@@ -6204,9 +6204,9 @@ static const struct mux muxes_DVBT_nz_WellingtonInfill[] = {
  };
 
 static const struct mux muxes_DVBT_nz_WellingtonKaukau[] = {
-	{.freq = 690000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
- 	{.freq = 706000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
- 	{.freq = 778000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
+	{.freq = 562000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
+ 	{.freq = 578000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
+ 	{.freq = 594000000, .bw = 0, .constellation = 3, .fechp = 3, .feclp = 0, .tmode = 1, .guard = 1, .hierarchy = 0},
  };
 
 static const struct mux muxes_DVBT_nz_WellingtonNgarara[] = {
